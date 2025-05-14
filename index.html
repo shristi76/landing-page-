@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fama Barber Shop & Beauty Salon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(-45deg, #962424, #2525a7, #62459c, #c01ec0);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    header { background: #111; color: #fff; padding: 20px 0; }
+    nav { display: flex; justify-content: center; gap: 30px; }
+    nav a { color: #fff; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #6dfd5a; }
+    .hero {
+      background: url('https://www.google.com/imgres?q=barber&imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F019%2F495%2F567%2Fnon_2x%2Fbarber-shop-and-shaving-machine-logo-design-vector.jpg&imgrefurl=https%3A%2F%2Fwww.vecteezy.com%2Ffree-vector%2Fbarber-logo&docid=NEkDGkiG7fKTJM&tbnid=L9SubdueXjwFGM&vet=12ahUKEwj-4auSiaONAxXkRCoJHT99LS0QM3oECHMQAA..i&w=1742&h=980&hcb=2&ved=2ahUKEwj-4auSiaONAxXkRCoJHT99LS0QM3oECHMQAA') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      animation: fadeIn 2s ease-in;
+    }
+    .hero h1 { font-size: 3rem; }
+    section { padding: 40px 20px; max-width: 1200px; margin: auto; }
+    .about, .services {
+      background-color: #fef3bd;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 20px 48px;
+      animation: fadeInUp 1s ease-in;
+    }
+    .about h2, .services h2 {
+      font-size: 1.5rem;
+      color: #000000;
+    }
+    .about p, .services ul {
+      font-size: 1.2rem;
+      color: #333;
+      
+    }
+    .services ul { list-style: disc; padding-left: 20px; }
+    .reviews article {
+      background: #fef3bd;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 5px solid #e78839;
+      border-radius: 5px;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #27ae60;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #010ec7;
+    }
+    .plans .plan {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      background: #fef3bd;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .plans .plan h3 { color: #000000; }
+    .contact iframe { width: 100%; height: 300px; border: 0; border-radius: 8px; }
+    footer { background: #111; color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
+     /* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .hero h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0 10px;
+     display:flex;
+    justify-content: center;
+  }
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  section {
+    padding: 20px 10px;
+  }
+  .about, .services {
+    margin: 10px;
+  }
+  .plans .plan {
+    padding: 15px;
+  }
+  .form-control input,
+  .form-control textarea {
+    font-size: 0.9rem;
+  }
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 15px;
+    display:flex;
+    justify-content: center;
+  }
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+  section {
+    padding: 30px 15px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+
+    .form-control { display: flex; flex-direction: column; margin-bottom: 15px; }
+    .form-control label { margin-bottom: 5px; }
+    .form-control input, .form-control textarea { padding: 10px; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc; }
+    #formMessage { color: green; margin-top: 10px; }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero" id="home">
+    <h1>Welcome to Fama Barber Shop & Beauty Salon</h1>
+  </div>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>At <strong>Fama Barber Shop & Beauty Salon</strong>, we believe in transforming your everyday grooming into a premium experience. Our seasoned professionals ensure top-quality service and a relaxing ambiance for all our clients.</p>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li><strong>Haircut</strong> – Stylish and customized to your personality</li>
+      <li><strong>Beard Service</strong> – Sharp trims and shaping for a neat look</li>
+      <li><strong>Premium Grooming</strong> – A full experience including facial and scalp care</li>
+    </ul>
+  </section>
+
+  <section id="reviews" class="reviews">
+    <h2>What Our Clients Say</h2>
+    <article>
+      <p>"Best haircut I've ever had! The staff is super friendly and professional." - <strong>John D.</strong></p>
+    </article>
+    <article>
+      <p>"Fama Salon always makes me feel brand new. Highly recommended!" - <strong>Sophia M.</strong></p>
+    </article>
+    <article>
+      <p>"Excellent service and stylish ambiance. I won't go anywhere else now." - <strong>Michael T.</strong></p>
+    </article>
+  </section>
+
+  <section id="plans" class="plans">
+    <h2>Service Plans</h2>
+    <div class="plan">
+      <h3>Basic - $32</h3>
+      <p>Includes: Haircut, Neck Shave, Hair Wash</p>
+    </div>
+    <div class="plan">
+      <h3>Standard - $45</h3>
+      <p>Includes: Haircut, Beard Trim, Wash, Styling</p>
+    </div>
+    <div class="plan">
+      <h3>Premium - $50</h3>
+      <p>Includes: Haircut, Beard Trim, Facial, Scalp Massage, Styling</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: contact@famabarbershop.com</p>
+    <p>Phone: +1 234 567 8901</p>
+    <h1>Ask Query</h1>
+    <form id="contactForm">
+      <div class="form-control">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-control">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-control">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+      <div id="formMessage"></div>
+    </form>
+
+    <h3>Our Location</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.1501229697075!2d-122.42067948468113!3d37.77492977975926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f7e35b4df6f3d%3A0x4c89925b5cb01076!2sSan+Francisco%2C+CA!5e0!3m2!1sen!2sus!4v1589346330462!5m2!1sen!2sus" allowfullscreen=""></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fama Barber Shop & Beauty Salon. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      if (name && email && message) {
+        document.getElementById('formMessage').textContent = 'Thank you for contacting us, ' + name + '!';
+        this.reset();
+      } else {
+        document.getElementById('formMessage').textContent = 'Please fill out all fields.';
+      }
+    });
+  </script>
+</body>
+</html>
