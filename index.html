@@ -10,7 +10,7 @@
     body {
       font-family: 'Poppins', sans-serif;
       line-height: 1.6;
-      background: linear-gradient(-45deg, #962424, #2525a7, #62459c, #c01ec0);
+      background: linear-gradient(-45deg, #262496, #2825f7, #4492f8, #7b0199);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
     }
@@ -230,6 +230,24 @@
       <h3>Premium - $50</h3>
       <p>Includes: Haircut, Beard Trim, Facial, Scalp Massage, Styling</p>
     </div>
+
+    
+<!-- Button -->
+<!-- <button id="detailsBtn">Details</button> -->
+
+<!-- Buttons -->
+<div style="margin: 10px 0;">
+  <button id="detailsBtn">Details</button>
+  <button id="closeIframeBtn" style="display:none; background-color: #c0392b;">Close</button>
+</div>
+
+<!-- Placeholder for embedded i.html -->
+<div id="iframeContainer"></div>
+
+
+<!-- Placeholder for embedded i.html -->
+<div id="iframeContainer"></div>
+
   </section>
 
   <section id="contact" class="contact">
@@ -276,6 +294,26 @@
         document.getElementById('formMessage').textContent = 'Please fill out all fields.';
       }
     });
+
+
+     
+ document.getElementById("detailsBtn").addEventListener("click", function () {
+  const iframe = document.createElement("iframe");
+  iframe.src = "i.html";
+  iframe.style.width = "100%";
+  iframe.style.height = "500px";
+  iframe.style.border = "none";
+  iframe.style.backgroundColor = "#f5f5f5"; // Visible only if iframe page is same-origin and transparent
+  document.getElementById("iframeContainer").innerHTML = "";
+  document.getElementById("iframeContainer").appendChild(iframe);
+  document.getElementById("closeIframeBtn").style.display = "inline-block";
+});
+
+document.getElementById("closeIframeBtn").addEventListener("click", function () {
+  document.getElementById("iframeContainer").innerHTML = "";
+  this.style.display = "none";
+});
+
   </script>
 </body>
 </html>

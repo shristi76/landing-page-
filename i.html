@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Render i.html</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 34px;
+      margin-top: 90px;
+      justify-content: center;
+    }
+
+    .image-gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    #iframeContainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+
+    #iframeContainer iframe {
+      width: 90%;
+      height: 90%;
+      border: none;
+      border-radius: 10px;
+      background-color: white;
+    }
+
+    #closeIframe {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 24px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .image-gallery img {
+        width: 100%;
+      }
+
+      #iframeContainer iframe {
+        width: 95%;
+        height: 85%;
+      }
+    }
+
+      body {
+    background-color: #000000; /* Or any color you like */
+    font-family: sans-serif;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Button -->
+<!-- <button id="detailsBtn">Details</button> -->
+
+<!-- Image Gallery -->
+<div class="image-gallery">
+  <img src="i11.jpeg" alt="Style 1">
+  <img src="i22.jpeg" alt="Style 2">
+  <img src="i33.jpeg" alt="Style 3">
+  <img src="i44.jpeg" alt="Style 4">
+  <img src="i55.jpeg" alt="Style 5">
+</div>
+
+<!-- Iframe Modal -->
+<!-- <div id="iframeContainer">
+  <button id="closeIframe">Close</button>
+  <iframe id="detailsFrame" title="Details"></iframe>
+</div> -->
+
+<!-- JavaScript -->
+<script>
+  const iframeContainer = document.getElementById("iframeContainer");
+  const detailsFrame = document.getElementById("detailsFrame");
+
+  document.getElementById("detailsBtn").addEventListener("click", function () {
+    iframeContainer.style.display = "flex";
+    detailsFrame.src = "i.html"; // Load the content only when opening
+  });
+
+//   document.getElementById("closeIframe").addEventListener("click", function () {
+//     iframeContainer.style.display = "none";
+//     detailsFrame.src = ""; // Unload iframe content to prevent nested load
+//   });
+</script>
+
+</body>
+</html>
