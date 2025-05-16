@@ -3,7 +3,7 @@
 Welcome to the official landing page for **Fama Barber Shop & Beauty Salon** – a modern, responsive, and animated web experience built with HTML, CSS, and JavaScript.
 
 🌐 **Live Preview:**  
-🔗 [Visit Website](https://landing-page-nyhb3j5r1-shristis-projects-bd6b62d3.vercel.app)
+🔗 [https://landing-page-sigma-virid.vercel.app/)
 
 
 
